@@ -1,0 +1,68 @@
+bool ciclos(int *v, int k)			La funcion ciclos comprueba todas las posiciones del vector con las demas, una a una
+" bool a = false;"			para que asi se cumpla el ciclo hamiltoniano del cual se trata el problema 
+"for (int i = 1; i <= k; i++)"			comrpueba posicio a posicion que no se repita ningun numero o ciudad dentro del vector solucion
+    {			
+"        for (int j = 2; j <= k; j++)"			k: 1
+        {			0 1
+            if (v[i] == v[j] && i != j)			entra en ciclos y comprueba, no son iguales pues sigue
+            {			k: 2
+"                a = true;"			0 1 2
+            }			entra en ciclos y comprueba, no son iguales pues sigue
+        }			k: 3
+    }			0 1 2 1
+"    return a;"			entra en ciclos y comprueba
+}			son iguales 1 y 1 entonces no sigue aumentamos el valor
+			k: 3
+			0 1 2 3 entra en ciclos y comprueba, no son iguales entonces tenemos solucion
+			k: 2
+			0 1 3
+			entra en ciclos y comprueba, no son iguales pues sigue
+			k: 3
+			0 1 3 1
+			son iguales 1 y 1 entonces no sigue aumentamos el valor
+			k: 3
+			0 1 3 2 entra en ciclos y comprueba, no son iguales, entonces tenemos otra solucion
+			
+			k: 1
+			0 2
+			entra en ciclos y comprueba, no son iguales, sigue
+			k: 2
+			0 2 1
+			entra en ciclos y comprueba, no son iguales, sigue
+			k: 3
+			0 2 1 2
+			son iguales 2 y 2 entonces no sigue aumentamos el valor
+			k: 3
+			0 2 1 3 entra en ciclos y comprueba, no son iguales, entonces tenemos otra solucion
+			k: 2
+			0 2 3
+			entra en ciclos y comprueba, no son iguales, sigue
+			k: 3
+			0 2 3 1 entra en ciclos y comprueba, no son iguales entonces tenemos solucion
+			k: 3
+			0 2 3 2
+			entra en ciclos y comprueba, son iguales 2 y 2, entonces no sigue, aumentamos el valor
+			k: 1
+			0 3
+			entra en ciclos y comprueba, no son iguales pues sigue
+			k: 2
+			0 3 1
+			entra en ciclos y comprueba, no son iguales pues sigue
+			k: 3
+			0 3 1 2 entra en ciclos y comprueba, no son iguales, entonces tenemos otra solucion
+			k: 3
+			0 3 1 3
+			entra en ciclos y comprueba
+			son iguales 3 y 3, entonces no sigue, aumentamos el valor
+			k: 2
+			0 3 2
+			entra en ciclos y comprueba, no son iguales pues sigue
+			k: 3
+			0 3 2 1entra en ciclos y comprueba, no son iguales entonces tenemos otra solucion
+			k: 3
+			0 3 2 3
+			entra en ciclos y comprueba
+			son iguales 3 y 3, no sigue
+			
+			voptimo: [0 1 3 2 0]. El costo optimo es de : 56
+			el tiempo es:146

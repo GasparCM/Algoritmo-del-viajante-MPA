@@ -1,0 +1,16 @@
+
+entrada3.txt, n=3
+tiempo algoitmo vuelta atras:6
+tiempo algoritmo ramificación y poda:4
+
+entrada.txt, n = 10;
+tiempo algoitmo vuelta atras:5994
+tiempo algoritmo ramificación y poda:11
+
+entrada2.txt, n=15
+tiempo algoitmo vuelta atras:341788
+tiempo algoritmo ramificación y poda:315549
+
+entrada4.txt, n=7
+tiempo algoitmo vuelta atras: peta ns pk
+tiempo algoritmo ramificación y poda: peta ns pk
